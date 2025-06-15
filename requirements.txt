@@ -1,0 +1,5 @@
+numpy==2.3.0
+Pillow==11.2.1
+stitching==0.6.1
+ttkbootstrap==1.13.11
+ultralytics==8.3.155
