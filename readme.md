@@ -35,23 +35,15 @@ $ pip install -r requirements.txt
 $ cd cornvisionApp
 $ python main.py
 ```
-
-### Inference only
-
-If all you need is prediction on a folder of JPG/PNG images:
-
-```bash
-$ python run_inference_on_images.py --input /path/to/images --weights weights/last.pt --save
-```
-
 ---
 
 ## 🛠️ Project structure
 
 ```text
 📦UavProject
- ┣ 📂assets          # icons, sample images, model weights
- ┣ 📂gui              # ttkbootstrap GUI modules
+ ┣ 📂assets           # icons, model weights
+ ┣ 📂cornvisionApp              # ttkbootstrap GUI modules
+ ┣ 📂assets
  ┣ 📂stitching        # image‑stitch & panorama utilities
  ┣ 📂yolo_utils       # training / inference helpers
  ┣ 📜application.py   # main GUI entry point
