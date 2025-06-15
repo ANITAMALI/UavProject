@@ -41,14 +41,19 @@ $ python main.py
 
 ```text
 📦UavProject
- ┣ 📂assets           # icons, model weights
- ┣ 📂cornvisionApp              # ttkbootstrap GUI modules
- ┣ 📂assets
- ┣ 📂stitching        # image‑stitch & panorama utilities
- ┣ 📂yolo_utils       # training / inference helpers
- ┣ 📜application.py   # main GUI entry point
- ┣ 📜requirements.txt # pinned runtime deps (generated via pip‑compile / pipreqs)
- ┣ 📜README.md        # you are here
+ ┣ 📂sampleImages          # Samples for testing
+ ┣ 📂cornvisionApp
+ ┃ ┣ 📂assets              # icons, model weights
+ ┃ ┣ components.py
+ ┃ ┣ generate_heatmap.py
+ ┃ ┣ gui.py
+ ┃ ┣ gui_events.py
+ ┃ ┣ main.py                # GUI entry point
+ ┃ ┣ my_styles.py
+ ┃ ┣ perform_analysis.py
+ ┃ ┗ run_prediction.py
+ ┣ 📜requirements.txt       # pinned runtime deps at repo root
+ ┣ 📜README.md              # you are here
  ┗ 📜LICENSE
 ```
 
