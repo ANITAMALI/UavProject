@@ -102,11 +102,6 @@ def run_analysis_and_show_results(self):
     stitched_img, heatmap_overlay, maxval, my_colormap = analyze_images(self, images_for_yolo, real_width_m=4)
     # Get canvas dimensions
     self.canvas.after(1000)  # Wait for canvas to update before getting dimensions
-    canvas_width = self.canvas.winfo_width()
-    #canvas_height = self.canvas.winfo_height()
-    # Calculate target width for each image (half of canvas width)
-    #target_width = canvas_width // 2
-    # Convert and resize images
 
     bar_w, bar_h = 40, heatmap_overlay.shape[0]//2 # width, height in px
     grad = np.linspace(240, 0, bar_h, dtype=np.uint8).reshape(bar_h, 1)
@@ -217,8 +212,6 @@ def run_analysis_and_show_results(self):
             self.canvas.coords(self.windowbutton3,
                                w * 0.96,
                                h * 0.06)
-            #self.frame1.config(width=half_w-50, height=target_height-150)
-            #self.frame2.config(width=half_w-50, height=target_height-250)
 
     # Bind the handler (if not already bound)
     self.canvas.bind("<Configure>", on_canvas_resize)
