@@ -3,9 +3,11 @@ import cv2 as cv
 import numpy as np
 import os
 
-
+### Define paths to the model weights files ###
 current_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(current_dir, "assets", "last.pt")
+model_path = os.path.join(current_dir, "assets", "crop_detector.pt")
+model2_path = os.path.join(current_dir, "assets", "row_detector.pt")
+
 
 def bgr2rgb(image):
     """Convert OpenCV BGR image to RGB for correct display in Matplotlib."""
@@ -41,7 +43,7 @@ def find_crops(images:list, self, path=model_path, conf=0.2, classes=1, imgsz=64
     return all_boxes, annotated_images
 
 def count_rows(images, path=None, conf=0.2, classes=0, imgsz=640):
-    model2 = YOLO("C:\\Users\Boaz\Downloads\\best (3).pt")
+    model2 = YOLO(model2_path)
     annotated_images = []
     all_boxes = []
     for img in images:
