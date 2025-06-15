@@ -28,11 +28,12 @@ $ cd UavProject
 $ python -m venv venv
 $ source venv/bin/activate   # Windows: venv\Scripts\activate
 
-# 3. Install dependencies
+# 3. Install dependencies (located at the repo root)
 $ pip install -r requirements.txt
 
-# 4. Run the app
-$ python application.py
+# 4. Run the app (all source lives in the sub‑folder)
+$ cd cornvisionApp
+$ python main.py
 ```
 
 ### Inference only
