@@ -82,5 +82,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - [Ultralytics](https://github.com/ultralytics/ultralytics) for YOLOv10
 - [OpenCV](https://opencv.org/) for computer‑vision utilities
-- Inspiration and field data courtesy of the University of XYZ Agronomy Lab
 
