@@ -1,6 +1,6 @@
 # MaizeFieldAnalyzer
 
-A Python application that detects maize sprouts in UAV images using a custom‑trained YOLOv10 model, stitches the shots into a single orthomosaic, and overlays a plant‑density heat‑map for quick agronomic insights.
+A Python application that detects maize sprouts in UAV images using a custom‑trained YOLOv10 model, stitches the shots into a single orthomosaic, and outputs a plant‑density heat‑map for quick agronomic insights.
 
 ---
 
@@ -8,9 +8,8 @@ A Python application that detects maize sprouts in UAV images using a custom‑t
 
 - **Object detection** – YOLOv10 model fine‑tuned on aerial maize imagery.
 - **Automatic stitching** – perspective‑correct panorama generation for flight lines.
-- **Heat‑map overlay** – visualizes stand density and highlights gaps.
-- **GUI** – built with **ttkbootstrap + TkinterDnD2**, drag‑and‑drop image loading, zoom, and batch processing.
-- **Portable build** – optional PyInstaller one‑file EXE (CPU‑only) for Windows.
+- **Heat‑map** – visualizes stand density and highlights gaps.
+- **GUI** – built with **ttkbootstrap**.
 
 ## 📸 Demo
 
