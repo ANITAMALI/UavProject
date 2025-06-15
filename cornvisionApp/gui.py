@@ -1,17 +1,19 @@
 from components import CornProgressBar
 from gui_events import *
 from types import SimpleNamespace
+from pathlib import Path
+
 
 class myApp:
     def __init__(self, root):
+        base_dir = Path(__file__).resolve().parent / "assets"
         self.root = root
         self.images = {}
-        self.images["icon"] = load_PhotoImage("C:\\Users\\Boaz\\Desktop\\University Courses\\D\\Project\\TRY1\\cornvisionApp\\assets\\logo_ico.ico")
-        self.images["logo"], self.logo_h = load_PhotoImage("C:\\Users\Boaz\Desktop\\University Courses\D\Project\TRY1\cornvisionApp\\assets\\logo.png", 180)
-        self.images["welcome"], self.welcome_h = load_PhotoImage("C:\\Users\Boaz\Desktop\\University Courses\D\Project\TRY1\cornvisionApp\\assets\\Picture5.png", 650)
-        self.images["instructions"] = Image.open("C:\\Users\Boaz\Desktop\\University Courses\D\Project\TRY1\cornvisionApp\\assets\\instructions.png")
-        self.original_img = Image.open(
-            "C:\\Users\Boaz\Desktop\\University Courses\D\Project\TRY1\cornvisionApp\\assets\\background.png")
+        self.images["icon"] = load_PhotoImage(base_dir / "logo_ico.ico")
+        self.images["logo"], self.logo_h = load_PhotoImage(base_dir / "logo.png", 180)
+        self.images["welcome"], self.welcome_h = load_PhotoImage(base_dir / "Picture5.png", 650)
+        self.images["instructions"] = Image.open(base_dir / "instructions.png")
+        self.original_img = Image.open(base_dir / "background.png")
         self.instructions_tk = self.images["instructions"]
 
         self.root.iconphoto = (True, self.images["icon"])  # Set the window icon
@@ -24,7 +26,6 @@ class myApp:
         self.root.bind("<Configure>", self._resize_bg)
         self.loaded_images = []  # List to store uploaded images
 
-        #self.images["instruction"], _ = self._load_image(".../instructions.png", 500)
         ## --- Logo Section --- ##
 
         self.label1 = tb.Label(self.canvas, image=self.images["logo"])
